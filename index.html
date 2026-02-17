@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        #navbar{
+            background-color: black;
+            height: 70px;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            position: sticky;
+            top:0; 
+            z-index: 1;
+            align-items: center;
+        }
+        #navbar #search{
+            width: 15%;
+            height: 30px;
+        }
+        #navbar #navul{
+            display: flex;
+            width: 55%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box;
+            justify-content: space-evenly;
+            list-style: none;
+            align-items: center;
+            vertical-align: middle;
+            cursor: pointer;
+            font-size: 25px;
+            padding-top: 17px;
+            color: rgb(244, 240, 240);
+        }
+        #navbar h1{
+            font-size: 40px;
+            width: 27%;
+            color: rgb(176, 45, 124);
+            text-align: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        #store{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 35px;
+            justify-content: space-evenly;
+        }
+        .product{
+            height: 420px;
+            width :21%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            border: 1px solid;
+            align-items: center;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 1px 2px 1px 1px rgb(167, 163, 163);
+        }
+        .product img{
+            width:85%;
+            height: 280px;
+            padding-top: 20px;
+            padding-bottom: 5px;
+        }
+        .product:hover{
+            transform: scale(1.1,1.07);
+            box-shadow: 1px 3px 1px 1px rgb(167, 163, 163);;
+        }
+        .product div p del{
+            color:rgb(117, 108, 108) ;
+        }
+        .product button{
+            border-radius: 8px;
+            font-size: 17px;
+            padding: 15px;
+            padding-top: 7px;
+            padding-bottom: 5px;
+            color: white;
+            background-color: rgb(148, 145, 145);
+            border-style: none;
+        }
+        .product button:hover{
+            transform: scale(1.25,1.25);
+            background-color: rgb(82, 72, 58);
+        }
+        #check{
+            display: none;
+        }
+        .bi-list{
+            display: none;
+        }
+        @media screen and (max-width:1100px){
+            #navbar #navul {
+                display: none;
+                width:0%
+            }
+            #navbar {
+                display: flex;
+                justify-content: space-evenly;
+            }
+            #navbar h1{
+                width: 70%;
+                font-size: 35px;
+            }
+            #navbar #search{
+                width: 20%;
+                margin-right: 40px;
+            }
+            .bi-list{
+                display: block;
+                width: 20px; 
+                font-size: 35px;
+                color: white;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+            #check{
+                display: none;
+            }
+            #check:checked~#navul{
+                display: block;
+                position: absolute;
+                top: 70px;
+                right: 0px;
+                background-color: rgb(47, 62, 57);
+                width: 180px;
+                margin-top: 0px;
+                display: flex;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                padding-inline-start: 10px;
+                flex-direction: column;
+                align-items:flex-start
+            }
+        }
+        @media  screen and (max-width:599px) and (min-width:300px) {
+            .product{
+                width: 70%;
+            }
+        }
+        @media  screen and (max-width:850px) and (min-width:600px) {
+            .product{
+                width: 40%;
+            }
+        }
+        @media  screen and (max-width:1200px) and (min-width:849px) {
+            .product{
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <h1>Furniture Store</h1>
+        <input type="checkbox" id="check">
+        <label for="check"><i class="bi bi-list"></i></label>
+        <ul id="navul">
+            <li>Sofa</li>
+            <li>Dining table</li>
+            <li>Bed</li>
+            <li>Dressing table</li>
+        </ul>
+        <input type="text" placeholder="search..." id="search">
+    </div>
+    <div id="store">
+        <div class="product">
+            <img src="https://www.wakefit.co/blog/wp-content/uploads/2024/07/WSWB7860ARIGB_1.webp">
+            <div><p>Rs.29999 <del>Rs.40000</del></p></div> 
+            <button>Add To Cart</button>           
+        </div>
+        <div class="product">
+            <img src="https://mywakeup.in/cdn/shop/articles/71-k9ZQi2TL._SL1000_-min.webp?v=1740132698&width=1125">
+            <div><p>Rs.29999 <del>Rs.40000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71peaqU+lsL._AC_UF894,1000_QL80_.jpg">
+            <div><p>Rs.19999 <del>Rs.30000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://www.insaraf.com/cdn/shop/products/DSC_3057-Grey.jpg?v=1641389023">
+            <div><p>Rs.19999 <del>Rs.30000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://moonwooden.in/cdn/shop/files/91H82-mQZLL._SX425.jpg?v=1694853897">
+            <div><p>Rs.15999 <del>Rs.20000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://www.insaraf.com/cdn/shop/products/1304856603SC-1731.jpeg?v=1529680864">
+            <div><p>Rs.15999 <del>Rs.20000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81xXwS-dZoL._AC_UF894,1000_QL80_.jpg">
+            <div><p>Rs.6999 <del>Rs.10000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://caspianfurniture.com/cdn/shop/files/1_30.jpg?v=1711959518">
+            <div><p>Rs.6999 <del>Rs.10000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://cdn.decornation.in/wp-content/uploads/2020/05/laptop-table-with-storage-compartment.jpg">
+            <div><p>Rs.15999 <del>Rs.20000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://mysleepyhead.com/media/catalog/product/e/m/emptyname_113.jpg">
+            <div><p>Rs.15999 <del>Rs.20000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://magnoliahome.co.in/wp-content/uploads/2021/08/Tufted-Soho-Chair-1.1-1.jpg">
+            <div><p>Rs.35999 <del>Rs.40000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://www.estre.in/cdn/shop/files/1-min_1a7b23d8-e00c-4bca-86fe-9c65a55bcd1d.jpg?v=1743763633">
+            <div><p>Rs.35999 <del>Rs.40000</del></p></div> 
+            <button>Add To Cart</button>
+        </div>
+    </div>
+</body>
+</html>
