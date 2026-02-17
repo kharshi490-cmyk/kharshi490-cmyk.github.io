@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img1{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" class="img1">
+    <button id="next">Next</button>
+    <script>
+        var img_arr=["https://i.pinimg.com/736x/83/2d/a5/832da55b36711530124b4458771b417f.jpg",
+            "https://i.pinimg.com/1200x/36/62/f8/3662f8c88bb58cdc1e5ce17a7d34d8e3.jpg",
+            "https://i.pinimg.com/736x/c5/ab/d9/c5abd92a83d23c34933e4983ee8dd340.jpg",
+            "https://i.pinimg.com/736x/42/c3/11/42c3115caeff4fda388ecaf8cc7a63d9.jpg"];
+        var i=0;
+        document.getElementById("image").src=img_arr[i];
+    </script>
+</body>
+</html>
